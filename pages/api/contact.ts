@@ -24,7 +24,7 @@ async function handler(req: any, res: any) {
     try {
       await transport.sendMail({
         ...mailOptions,
-        subject: `[휴가모아] ${data.email}님의 문의내역입니다.`,
+        subject: `[가고싶어] ${data.email}님의 문의내역입니다.`,
         html: `<p>이메일: ${data.email}</p><p>연락처: ${data.phone}</p><p>문의내용: ${data.content}</p>`,
       });
       return res.status(200).json({ success: true });
